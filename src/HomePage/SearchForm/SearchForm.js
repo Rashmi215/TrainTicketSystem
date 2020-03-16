@@ -3,19 +3,38 @@ import {Card, Button, Form} from 'react-bootstrap';
 import './SearchForm.css';
 
 export default class SearchForm extends Component{
+    state = {
+        from: '',
+        to: ''
+    }
+
+    handleChange = e => {
+       this.setState({[e.target.name]: e.target.value})
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        if(this.state.from === '' || this.state.to === '') {
+            alert('Please fill the source and destination stations')
+        } else {
+            this.props.history.push('/list', {'from': this.state.from, 'to': this.state.to})
+        }
+        
+    }
+
     render(){
         return(
             <Card className='search-form' bg="info" text="light">
                 <Card.Body>
 
-                    <Form>
+                    <Form onSubmit={this.handleSubmit}>
                         <Form.Group>
                             <Form.Label>From</Form.Label>
-                            <Form.Control type="text" placeholder="Enter source station" />
+                            <Form.Control type="text" name='from' placeholder="Enter source station" onChange={this.handleChange}/>
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>To</Form.Label>
-                            <Form.Control type="text" placeholder="Enter destination station" />
+                            <Form.Control type="text" name='to' placeholder="Enter destination station" onChange={this.handleChange}/>
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Date</Form.Label>

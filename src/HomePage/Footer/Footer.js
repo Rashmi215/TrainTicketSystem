@@ -4,8 +4,8 @@ import './Footer.css';
 export default function Footer(){
     return(
         <div className='footer'>
-            <div class='footer-content'>
-                <div class='footer-section'>
+            <div className='footer-content'>
+                <div className='footer-section'>
                     <ul>
                         <li>Trains</li>
                         <li>General Information</li>
@@ -14,7 +14,7 @@ export default function Footer(){
                         <li>Enquiries</li>
                     </ul>
                 </div>
-                <div class='footer-section'>
+                <div className='footer-section'>
                     <ul>
                         <li>How To</li>
                         <li>Advertise with us</li>
@@ -23,7 +23,7 @@ export default function Footer(){
                         <li>Divyangjan Facilities</li>
                     </ul>
                 </div>
-                <div class='footer-section'>
+                <div className='footer-section'>
                     <ul>
                         <li>eWallet</li>
                         <li>Loyalty Program</li>
