@@ -1,0 +1,32 @@
+.footer{
+    background-color: #343A40;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    height: auto;
+}
+
+.footer .footer-bottom{
+    background-color: rgb(69, 72, 75);
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+.footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 1%;
+}
+
+.footer .footer-content ul {
+    list-style-type: none;
+}
+
