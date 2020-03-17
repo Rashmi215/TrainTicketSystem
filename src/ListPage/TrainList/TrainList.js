@@ -18,7 +18,7 @@ export default class TrainList extends Component{
     componentDidMount() {
         const {from} = this.props.location.state;
         const {to} = this.props.location.state;
-        axios.get('http://localhost:4000/trains')
+        axios.get('https://trainticket.netlify.com/trains')
            .then((res) => {
                 if(from.toLowerCase() === 'delhi' && to.toLowerCase() === 'mumbai') {
                     this.setState({list: res.data[0].DelMum})
